@@ -1,0 +1,168 @@
+/* Resetando margens e preenchimentos de todos os elementos para garantir consistência */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Define box-model consistente */
+}
+
+header,
+section h2,
+section h3,
+form button {
+    font-family: "Tilt Neon", serif;
+    font-weight: normal;
+}
+
+/* Estilização do cabeçalho (header) */
+header {
+    padding: 16px 0; /* Espaçamento vertical (superior e inferior) */
+    background-color: #bb111a; 
+    color: #E4E0C8; /* Cor do texto (bege claro) */
+}
+
+/* Estilização da lista de navegação no cabeçalho */
+header nav li {
+    display: inline; /* Exibe os itens de forma horizontal (em linha) */
+    margin-left: 16px; /* Espaçamento à esquerda entre os itens da lista */
+}
+
+/* Estilização dos links de navegação */
+header nav a {
+    color: #E4E0C8; /* Cor do texto do link (claro) */
+    text-decoration: none; /* Remove o sublinhado dos links */
+    font-size: 18px; /* Tamanho da fonte dos links */
+    transition: color 0.3s ease;  /* Transição suave */
+}
+
+@keyframes blink {
+    0%, 100% {
+        color: #E4E0C8;
+    }
+    50% {
+        color: #360211;
+    }
+}
+
+header nav a:hover{
+    animation: blink 1s infinite; /* Efeito de piscar */
+}
+
+/* Estilização do container principal da página */
+.container {
+    max-width: 1280px; /* Largura máxima do container */
+    width: 100%; /* Largura total disponível (100% da tela) */
+    margin: 0 auto; /* Centraliza o container horizontalmente */
+}
+
+/* Estilização do conteúdo dentro do cabeçalho, mantendo todos na mesma linha */
+header .container,
+section .container {
+    display: flex; /* Utiliza o modelo de layout flexível */
+    justify-content: space-between; /* Distribui o espaço entre os itens do container */
+    align-items: center;
+}
+
+/* Definindo o fundo e a cor do texto da página */
+body, input, textarea {
+    background-color: #121212; /* Fundo escuro (quase preto) */
+    color: #E4E0C8; /* Cor do texto (bege claro) */
+    font-family: "Roboto", serif;
+}
+
+/* Definindo o tamanho das imagens dentro da classe .brand-list */
+.brand-list img {
+    height: 40px; /* Altura fixa de 40px para as imagens */
+}
+
+/* Definindo o tamanho das imagens dentro da social-links */
+.social-links img {
+    height: 24px;
+}
+
+/* Exibindo as imagens da lista .brand-list lado a lado */
+.brand-list li {
+    display: inline; /* Exibe os itens da lista horizontalmente (em linha) */
+    margin-right: 8px; /*Espaço entre as logos */
+}
+
+/* O texto começa a ser alinhado de cima*/
+section .container{
+    align-items: flex-start;
+}
+/* Espaço entre a sessão e o header*/
+section {
+    padding: 24px;
+}
+
+/* Espaço entre o titulo e o texto */
+section h2 {
+    color: #ff2419ec;
+    margin-bottom: 16px;
+    text-transform: capitalize;
+}
+
+section p {
+    margin-bottom: 2%;
+}
+
+.store-front{
+    margin-right: 32px;
+}
+
+#contato .container{
+    display: block;
+}
+
+.contact-methods {
+    display: flex;
+    justify-content: space-between;
+}
+
+.social-links li {
+    display: inline;
+    margin-right: 8px;
+}
+
+.social-links li a{
+    text-decoration: none;
+}
+
+form input,
+form textarea,
+form button {
+    display: block;
+    width: 320px;
+    margin-bottom: 8px;
+    padding: 8px;
+}
+
+form textarea{
+    resize: none;
+    height: 100px;
+}
+
+section h3 {
+    margin-bottom: 16px;
+}
+form button {
+    background-color:#bb111a;
+    color: #E4E0C8;
+    border: none;
+}
+
+form button:hover {
+    background-color: #707070;
+    animation: blink 1s infinite;
+    cursor: pointer;
+}
+
+input:focus, textarea:focus{
+    outline-color: #bb111a;
+    outline-style: dotted;
+}
+
+footer {
+    background-color:#bb111a;
+    color: #E4E0C8;
+    padding:16px;
+}
