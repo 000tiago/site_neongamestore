@@ -15,7 +15,7 @@ form button {
 
 /* Estilização do cabeçalho (header) */
 header {
-    padding: 16px 0; /* Espaçamento vertical (superior e inferior) */
+    padding: auto, 0; /* Espaçamento vertical (superior e inferior) */
     background-color: #bb111a; 
     color: #E4E0C8; /* Cor do texto (bege claro) */
 }
@@ -67,6 +67,7 @@ body, input, textarea {
     background-color: #121212; /* Fundo escuro (quase preto) */
     color: #E4E0C8; /* Cor do texto (bege claro) */
     font-family: "Roboto", serif;
+    flex-wrap: flex;
 }
 
 /* Definindo o tamanho das imagens dentro da classe .brand-list */
@@ -164,5 +165,75 @@ input:focus, textarea:focus{
 footer {
     background-color:#bb111a;
     color: #E4E0C8;
-    padding:16px;
+    padding: 16px; 0;
+    
+}
+.container-photos {
+    width: 80%; /* Ajusta o tamanho da galeria */
+    padding: 20px;
+    margin: 0 auto; /* Centraliza o container */
+    display: flex;
+    flex-wrap: nowrap; /* Permite que as imagens se ajustem em linhas */
+    justify-content: center; /* Centraliza as imagens horizontalmente */
+    align-items: center; /* Centraliza as imagens verticalmente */
+}
+
+.photo {
+    width: 230px; /* Largura fixa para as imagens */
+    margin: 10px; /* Espaçamento entre as imagens */
+    box-shadow: 0 0 20px 2px rgba(0, 0, 0, 0.1); /* Sombra para as imagens */
+    overflow: hidden;
+    border-radius: 6px;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.photo img {
+    display: block;
+    width: 100%; /* A imagem ocupa toda a largura da div */
+    border-radius: 6px;
+    transition: transform 0.3s ease; /* Efeito suave para o hover */
+}
+
+.photo:hover {
+    transform: scale3d(1.2, 1.2, 1.2); /* Move a imagem para cima ao passar o mouse */
+    box-shadow: 0 0 30px 5px rgba(0, 0, 0, 0.2); /* Aumenta a sombra */
+}
+
+.photo:hover img {
+    transform: scale(1.1); /* Aumenta a imagem suavemente */
+}
+
+/* Estilos responsivos para telas menores */
+@media (max-width: 768px) {
+    #about .container {
+        flex-direction: column; /* Alinha elementos verticalmente */
+        text-align: center; /* Centraliza o texto */
+    }
+
+    #about img.store-front {
+        max-width: 100%; /* Imagem ocupa toda a largura */
+        margin-bottom: 20px; /* Espaço entre imagem e texto */
+    }
+
+    #about div {
+        max-width: 100%; /* Texto ocupa toda a largura */
+    }
+}
+
+@media (max-width: 768px) {
+    #contato .contact-methods {
+        flex-direction: column; /* Elementos alinhados verticalmente */
+        text-align: center; /* Centraliza o conteúdo */
+        gap: 30px; /* Espaçamento entre os itens */
+    }
+
+    #contato .contact-methods div {
+        max-width: 100%; /* Itens ocupam toda a largura */
+    }
+
+    #contato iframe {
+        max-width: 100%; /* O mapa ocupa toda a largura */
+        height: auto; /* Ajusta a altura proporcionalmente */
+    }
 }
